@@ -1,0 +1,24 @@
+<mat-card>
+  <form [formGroup]="signupForm" (ngSubmit)="onRegister()">
+
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="name" #nameInput formControlName="name">
+      </mat-form-field><br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="email" #emailInput formControlName="email">
+      </mat-form-field><br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="password" #passwordInput formControlName="password">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="age" #ageInput formControlName="age">
+      </mat-form-field>
+      <br>
+      <button mat-raised-button class="bg-success" type="submit">signup</button>
+    </div>
+
+
+  </form>
+</mat-card>

@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <span>MY TODO</span>
+  <span class="spanner1"></span>
+
+  
+
+  <button mat-raised-button color="primary" *ngIf="!userIsAuthenticated" routerLink="login">Login</button>
+  <button mat-raised-button color="primary" *ngIf="userIsAuthenticated">Manage Tasks</button>
+  <span class="spanner2"></span>
+  <button mat-raised-button color="primary" *ngIf="!userIsAuthenticated" routerLink="signup">signUp</button>
+  <!-- <button mat-raised-button color="primary" *ngIf="userIsAuthenticated" (click)="onLogout()">logout</button> -->
+
+  <button mat-raised-button color="primary" *ngIf="userIsAuthenticated" [matMenuTriggerFor]="menu">user</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>profile</button>
+    <button mat-raised-button color="primary"  (click)="onLogout()">logout</button>
+  </mat-menu>
+
+</mat-toolbar>
+
+<!-- <div>
+  <router-outlet></router-outlet>
+</div> -->

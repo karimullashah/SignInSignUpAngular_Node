@@ -1,0 +1,17 @@
+<mat-card>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput  placeholder="email" #emailInput formControlName="email" >
+      </mat-form-field><br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="password" #passwordInput formControlName="password" >
+      </mat-form-field>
+      <br>
+      <button mat-raised-button class="bg-success" type="submit">login</button>
+    </div>
+
+
+  </form>
+</mat-card>
